@@ -1,0 +1,19 @@
+<h1>Welcome!</h1>
+<div class="container">
+    <p>You can manage you to do's<a routerLink="/todos"> here</a></p>
+</div>
+<div class="container">
+    Click here to het a customized welcome message
+    <button type="button" class="btn btn-secondary" (click)="getWelcomeMessage()">Get Welcome Message</button>
+</div>
+<div class="container" *ngIf="messageDisplay">
+    <br>
+      <h4>The welcome message</h4> 
+      <p>{{theMessage}}</p>
+</div>
+<div class="container" *ngIf="messageDisplay">
+    <br>
+      <h4>The message with path variable</h4> 
+      <p>{{theMessageWithPath}}</p>
+</div>
+

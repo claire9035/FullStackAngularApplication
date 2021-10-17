@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Login!</h1>
+    <div class="col-md-12">
+        <form #formDetails="ngForm" (ngSubmit)="handelBasicAuthLogin(formDetails)">
+            <div class="alert alert-warning" style="color: red; text-align: center;" *ngIf="invalidCredentials">{{errorMessage}}</div>
+            <div class="form-group">
+                <label for="email">Username</label>
+                <input type="text" name="username" class="form-control" ngModel>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" ngModel>
+            </div>   
+           <div class="form-group">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div> 
+        </form>
+    </div>
+</div>

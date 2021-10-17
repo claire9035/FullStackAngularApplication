@@ -1,0 +1,43 @@
+<h1>My To Do's</h1>
+<div class="alert alert-success" *ngIf="message">{{message}}</div>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">To Do's</th>
+        <th scope="col">Target Date</th>
+        <th scope="col">is it Done?</th>
+        <th scope="col">Actions</th> -->
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">age</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>{{todo.description}}</td>
+        <td>{{todo.targetDate | date}}</td>
+        <td>{{todo.done}}</td> 
+        <td>
+          <button type="button" class="btn btn-success"(click)="updateListOfTodo(todo)">Update</button>&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-danger" (click)="deleteListOfTodo(todo.id)">Delete</button>
+        </td>    
+      </tr>
+
+      <!-- <tr *ngFor="let list of employ">
+        <td>{{list.name}}</td>
+        <td>{{list.email}}</td>
+        <td>{{list.age}}</td> 
+        <td>
+          <button type="button" class="btn btn-success"(click)="updateListOfTodo(list)">Update</button>&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-danger" (click)="deleteListOfEmploy(list.id)">Delete</button>
+        </td>    
+      </tr> -->
+    </tbody>
+  </table>
+  <div class="row">
+    <button type="button" class="btn btn-success"(click)="addTodo()">Add</button>
+  </div>
+
+</div>
